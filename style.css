@@ -152,7 +152,10 @@ svg path{
         grid-template-rows: repeat(40,1fr);
         grid-template-columns: repeat(40,1fr);
         border: 2px solid white;
-    } 
+    }
+    .btns{
+        display: grid;
+    }
 }
 .musicSoundBox{
     position: fixed;
