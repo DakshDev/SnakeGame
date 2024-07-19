@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Snake Game | 🐍</title>
+    <link rel="stylesheet" href="./css/main.css">
+    <link async rel="shortcut icon" href="./img/apple.png" type="image/x-icon">
+</head>
+<body>
+    <!-- SankeGame Branch -->
+
+    <div id="container" class="low">
+        <div id="settingBtn" clickSoundPlayAttr></div>
+        <div id="settingBox">
+            <span id="settingTag">SETTING</span>
+            <span id="closeBtn" clickSoundPlayAttr>✖</span>
+            <table>
+                <tr>
+                    <td>Snake Speed</td>
+                    <td>
+                        <div>
+                            <input type="range" min="5" max="15" id="snakeSpeedInput">
+                            <span snakeSpeedAttr>0</span>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Music</td>
+                    <td>
+                        <div>
+                            <input type="range" id="musicVolumeInput">
+                            <span musicVolumeAttr>0</span>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Sound</td>
+                    <td>
+                        <div>
+                            <input type="range"  min="0" max="100" id="soundVolumeInput">
+                            <span soundVolumeAttr>0</span>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Graphic Quality</td>
+                    <td>
+                        <div id="graphicQualityBox">
+                            <span clickSoundPlayAttr>Low</span>
+                            <span clickSoundPlayAttr>Medium</span>
+                            <span clickSoundPlayAttr>High</span>
+                        </div>
+                    </td>
+                </tr>
+            </table>
+            <div id="saveSettingBox">
+                <button type="button" name="saveSetting" clickSoundPlayAttr>Save Setting</button>
+                <button type="button" name="resetSetting" clickSoundPlayAttr>Reset Setting</button>
+            </div>
+        </div>
+        <!-- Main Board -->
+        <div id="board" class="blur1"></div>
+    </div>
+
+    <!-- Start Box -->
+    <div id="containerStart">
+        <div id="innerDarkBG"></div>
+        <div id="mainStart">
+            <div id="innerOne">
+                <h1 id="headingSnakeGame">Snake Game</h1>
+                <div id="recordBox">
+                    Welcome : <span userNameDisplay style="color: rgb(228, 228, 228);"></span>
+                </div>
+            </div>
+            <div id="innerTwo">
+                <div id="buttonBox">
+                    <span class="buttonStart" playGameButton clickSoundPlayAttr>Play</span>
+                    <span class="buttonStart" settingGameButton clickSoundPlayAttr>Setting</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Game Over -->
+     <div id="containerGameOver">
+        <div id="mainGameOverBox">
+            <h2 id="afterOutH2">Nice Try&nbsp;<span userNameDisplay></span></h2>
+            <h1>Game Over</h1>
+            <div>
+                <span id="playAgainButton">Play Again</span>
+            </div>
+        </div>
+     </div>
+
+
+     <!-- Enter Your Name -->
+    <div id="containerUserName">
+        <form id="userNameBox">
+            <input type="text" name="userName" placeholder="Enter Your Name" required>
+            <input type="submit" value="Enter" name="enterButton" clickSoundPlayAttr>
+        </form>
+    </div>
+    
+
+<!-- =========================================== -->
+    <!-- Prank With Friend -->
+    <div id="prankWithShazaib">
+        <img src="./img/shazaib.webp">
+        <h1>He is Gay 😂</h1>
+        <div id="prankBGDARK"></div>
+     </div>
+<!-- =========================================== -->
+
+
+
+<!-- For Author and Verson -->
+ <div id="forAuthor">
+    <span>Author :</span>&nbsp;<span>Daksh</span>
+ </div>
+ <div id="forVerson">
+    <span>Verson :</span>&nbsp;<span>0.01v</span>
+ </div>
+
+    <!-- User Name Code -->
+    <script>
+        (()=>{
+            if(localStorage.userName == undefined){
+            document.querySelector("#userNameBox").addEventListener("submit",e=>{
+                e.preventDefault();
+                let userName = document.querySelector(`input[name="userName"]`)
+                localStorage.userName = String(userName.value.toLowerCase());
+                console.log("S");
+                containerUserName.style.display = "none";
+                initFun();
+            })
+            }else{
+                initFun()
+            }
+
+            function initFun(){
+                if(localStorage.userName !== undefined){
+                    containerUserName.style.display = "none";
+                    document.querySelectorAll("[userNameDisplay]")
+                    .forEach(e=>{
+                        e.innerHTML = localStorage.userName;
+                    })
+                }
+            }
+        })();
+    </script>
+
+    <!-- Module All js file are connected with module.js -->
+    <script type="module" src="./js/module.js"></script>
+</body>
+</html>
