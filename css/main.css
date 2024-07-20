@@ -55,8 +55,6 @@ html,body{
     z-index: 99;
     border-radius: 3px;
 }
-
-
 input[type="range"] {
     -webkit-appearance: none;
     width: 100%;
@@ -68,11 +66,9 @@ input[type="range"] {
     border-radius: 50px;
     transition: opacity .2s;
   }
-  
 input[type="range"]:hover {
     opacity: 1;
   }
-  
 input[type="range"]::-webkit-slider-thumb {
     -webkit-appearance: none;
     appearance: none;
@@ -90,12 +86,6 @@ input[type="range"]::-moz-range-thumb {
     border-radius: 50px;
     cursor: pointer;
   }
-
-
-
-
-
-
 
 
 
@@ -137,6 +127,8 @@ input[type="range"]::-moz-range-thumb {
 
 
 
+
+
 /* Main */
 #board{
     height: 80vmin;
@@ -170,20 +162,6 @@ input[type="range"]::-moz-range-thumb {
     background-repeat: no-repeat;
     z-index: -1;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -239,7 +217,6 @@ tr td:nth-child(2) > div{
     width: 20px;
     text-align: center;
 }
-
 /* settingTag */
 #settingTag{
     padding: 20px;
@@ -253,8 +230,6 @@ tr td:nth-child(2) > div{
     border-radius: 50px;
     border: 2px solid #fff;
 }
-
-
 /* closeBtn */
 #closeBtn{
     padding: 5px;
@@ -276,8 +251,6 @@ tr td:nth-child(2) > div{
 #closeBtn:active{
     scale: 0.9;
 }
-
-
 /* Graphic Quality Box */
 #graphicQualityBox{
     display: flex;
@@ -293,8 +266,6 @@ tr td:nth-child(2) > div{
 #graphicQualityBox > span:nth-child(1){
     background: #2ecc71;
 }
-
-
 /* Save Setting Box */
 #saveSettingBox{
     display: flex;
@@ -318,46 +289,12 @@ tr td:nth-child(2) > div{
 #saveSettingBox > button[name="resetSetting"]:active{
     background: #27ae60;
 }
- 
-
 #saveSettingBox > button[name="resetSetting"]{
     background: #e74c3c;
 }
 #saveSettingBox > button[name="resetSetting"]:active{
     background: #c0392b;
 }
-    
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -453,24 +390,6 @@ tr td:nth-child(2) > div{
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 /* =============================================== */
 #containerGameOver{
     position: absolute;
@@ -538,26 +457,6 @@ tr td:nth-child(2) > div{
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 /* -================================================ */
 #containerUserName{
     position: fixed;
@@ -594,66 +493,4 @@ tr td:nth-child(2) > div{
 }
 #userNameBox > input[name="enterButton"]:active{
     background: #29b965;
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* Temp */
-#prankWithShazaib{
-    position: fixed;
-    left: 50%;
-    top: 50%;
-    transform: translateX(-50%) translateY(-50%);
-    width: 600px;
-    height: 550px;
-    overflow: hidden;
-    border-radius: 10px;
-    z-index: 9999;
-    display: none;
-}
-#prankWithShazaib > img{
-    height: 100%;
-    width: 100%;
-}
-#prankWithShazaib > h1{
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translateX(-50%) translateY(-50%);
-    font-size: 50px;
-    color: #ffffff;
-    z-index: 2;
-    display: block;
-    width: 100%;
-    text-align: center;
-}
-#prankBGDARK{
-    position: absolute;
-    left: 0;
-    top: 0;
-    height: 100%;
-    width: 100%;
-    background: #00000028;
 }
