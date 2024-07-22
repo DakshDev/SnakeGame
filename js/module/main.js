@@ -44,22 +44,14 @@ function gameEngine(){
             right: true,
         }
         keyWork = false;
-        // Prank
-        prankFunForS();
         playAgainButton.addEventListener("click",()=> afterClickPlayAgain() );
         window.addEventListener("keydown",(e)=>{
-            if(e.key == "Enter") {
-                afterClickPlayAgain()
-                // Prank
-                prankWithShazaib.style.display = "none";
-            }
+            if(e.key == "Enter") afterClickPlayAgain();
         });
         function afterClickPlayAgain(){
             musicSound.play();
             containerGameOver.style.display = "none";
             keyWork = true;
-            // Prank
-            prankWithShazaib.style.display = "none";
         }
     }
 
@@ -199,21 +191,3 @@ function checkStartBoxIsEnebled(){
 
 // Export Data
 export {snakeArr, gameEngine, foodSound, gameOverSound, clickSound, musicSound, checkStartBoxIsEnebled}
-
-
-
-
-
-
-
-
-
-// Prank
-function prankFunForS(){
-    switch (localStorage.userName) {
-        case "shazaib":
-        case "shahzaib":
-            prankWithShazaib.style.display = "block";
-            break;
-    }  
-}

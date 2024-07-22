@@ -8,8 +8,7 @@
     <link async rel="shortcut icon" href="./img/apple.png" type="image/x-icon">
 </head>
 <body>
-    <!-- Main Branch -->
-
+    <!-- Main Container -->
     <div id="container" class="low">
         <div id="settingBtn" clickSoundPlayAttr></div>
         <div id="settingBox">
@@ -17,7 +16,7 @@
             <span id="closeBtn" clickSoundPlayAttr>✖</span>
             <table>
                 <tr>
-                    <td>Snake Speed</td>
+                    <td>Speed</td>
                     <td>
                         <div>
                             <input type="range" min="5" max="15" id="snakeSpeedInput">
@@ -44,7 +43,7 @@
                     </td>
                 </tr>
                 <tr>
-                    <td>Graphic Quality</td>
+                    <td>Graphic</td>
                     <td>
                         <div id="graphicQualityBox">
                             <span clickSoundPlayAttr>Low</span>
@@ -70,7 +69,7 @@
             <div id="innerOne">
                 <h1 id="headingSnakeGame">Snake Game</h1>
                 <div id="recordBox">
-                    Welcome : <span userNameDisplay style="color: rgb(228, 228, 228);"></span>
+                    Welcome : <span userNameDisplay style="color: rgb(218, 218, 218);"></span>
                 </div>
             </div>
             <div id="innerTwo">
@@ -104,8 +103,7 @@
     </div>
     
 
-
-<!-- For Author and Verson -->
+<!-- Author and Verson -->
  <div id="forAuthor">
     <span>Author :</span>&nbsp;<span>Daksh</span>
  </div>
@@ -113,35 +111,35 @@
     <span>Verson :</span>&nbsp;<span>0.01v</span>
  </div>
 
-    <!-- User Name Code -->
-    <script>
-        (()=>{
-            if(localStorage.userName == undefined){
-            document.querySelector("#userNameBox").addEventListener("submit",e=>{
-                e.preventDefault();
-                let userName = document.querySelector(`input[name="userName"]`)
-                localStorage.userName = String(userName.value.toLowerCase());
-                console.log("S");
+<!-- User Name Code -->
+<script>
+    (()=>{
+        if(localStorage.userName == undefined){
+        document.querySelector("#userNameBox").addEventListener("submit",e=>{
+            e.preventDefault();
+            let userName = document.querySelector(`input[name="userName"]`)
+            localStorage.userName = String(userName.value.toLowerCase());
+            console.log("S");
+            containerUserName.style.display = "none";
+            initFun();
+        })
+        }else{
+            initFun()
+        }
+
+        function initFun(){
+            if(localStorage.userName !== undefined){
                 containerUserName.style.display = "none";
-                initFun();
-            })
-            }else{
-                initFun()
+                document.querySelectorAll("[userNameDisplay]")
+                .forEach(e=>{
+                    e.innerHTML = localStorage.userName;
+                })
             }
+        }
+    })();
+</script>
 
-            function initFun(){
-                if(localStorage.userName !== undefined){
-                    containerUserName.style.display = "none";
-                    document.querySelectorAll("[userNameDisplay]")
-                    .forEach(e=>{
-                        e.innerHTML = localStorage.userName;
-                    })
-                }
-            }
-        })();
-    </script>
-
-    <!-- Module All js file are connected with module.js -->
-    <script type="module" src="./js/module.js"></script>
+<!-- Module All js file are connected with module.js -->
+<script type="module" src="./js/module.js"></script>
 </body>
 </html>

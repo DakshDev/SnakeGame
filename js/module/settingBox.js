@@ -204,5 +204,4 @@ resetSetting.addEventListener("click",function(){
 
 
 
-
 export {inputAndAttr, inputEventFun, speedSnake, graphicFun, gameGraphicQuality, saveSettingFun};

@@ -14,4 +14,6 @@ function gameOver(snake){
 }
 
 
+
+
 export {gameOver}

@@ -47,19 +47,3 @@ document.querySelector("[playGameButton]")
     containerStart.style.display = "none";
     checkStartBoxIsEnebled();
 })
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
